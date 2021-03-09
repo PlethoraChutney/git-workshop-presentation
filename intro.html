@@ -2,6 +2,9 @@
   <head>
     <link rel="stylesheet" href="reveal_repo/dist/reveal.css">
     <link rel="stylesheet" href="reveal_repo/dist/theme/white.css">
+    <script src="reveal_repo/plugin/markdown/markdown.js"></script>
+    <script src="reveal_repo/plugin/highlight/highlight.js"></script>
+    <link rel="stylesheet" href="css/paraiso-light.css">
   </head>
   <body>
     <div class="reveal">
@@ -58,6 +61,32 @@
                 <a href="https://github.com/plethorachutney/appia/" target="_blank">My appia github repo</a>
             </section>
         </section>
+        <section data-auto-animate>
+            <pre data-id="code-block"><code class='language-python' data-trim>
+                if True:
+                    print('Hello world!')
+            </code></pre>
+        </section>
+        <section data-auto-animate>
+            <pre data-id="code-block"><code class='language-python' data-trim>
+                def print_message(message):
+                    print(message)
+                    
+                    if message is not 'Hello world!':
+                        print('Hello world!')
+            </code></pre>
+        </section>
+        <section data-auto-animate>
+            <pre data-id="code-block"><code class='language-python' data-trim>
+                def print_message(message):
+                    print(message)
+                    
+                    if message is not 'Hello world!':
+                        print('Hello world!')
+            </code></pre>
+            <pre><code class='shell session'>$ git add printer.py</code></pre>
+            <pre class="fragment"><code class='shell'>$ git commit --message 'Allow printing of any message'</code></pre>
+        </section>
       </div>
     </div>
 
@@ -65,6 +94,7 @@
     <script src="reveal_repo/dist/reveal.js"></script>
     <script>
       Reveal.initialize({
+          plugins: [ RevealMarkdown, RevealHighlight ],
           hash: true,
       });
     </script>
