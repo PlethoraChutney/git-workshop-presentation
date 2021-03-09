@@ -32,43 +32,26 @@
             </ul>
         </section>
         <section data-auto-animate>
-			<h2>What does <span style="color: plum;">git</span> do?</h2>
 			<div class="r-hstack">
 				<div style="width: 65%;">
 					<img src="images/snapshots.png">
 				</div>
 				<div style="width: 35%;">
 					<p>
-						These "snapshots" are called <span style="color: #ff7f0e;">commits</span>
+						Git stores a series of "snapshots" of your work on a project
+					</p>
+					<p class="fragment">
+						These "snapshots" are called <span class="gittext committed">commits</span>
 					</p>
 					<p class='fragment'>
 						The set of all <span style="color: #ff7f0e;">commits</span> makes up the history of your project, and is called
-						the <span style="color: seagreen;">repository</span>, or <span style="color: seagreen;">repo</span>
+						the <span class="gittext repo">repository</span>, or <span class="gittext repo">repo</span>
 					</p>
 					<p class='fragment'>
-						When you go to github, you're browsing other people's <span style="color: seagreen;">repos</span>
+						When you go to github, you're browsing other people's <span class="gittext repo">repos</span>
 					</p>
 				</div>
 			</div>
-            
-        </section>
-        <section>
-            <section>
-                <p>
-                    These "snapshots" are called <span style="color: #ff7f0e;">commits</span>
-                </p>
-                <p class='fragment'>
-                    The set of all <span style="color: #ff7f0e;">commits</span> makes up the history of your project, and is called
-                    the <span style="color: seagreen;">repository</span>, or <span style="color: seagreen;">repo</span>
-                </p>
-                <p class='fragment'>
-                    When you go to github, you're browsing other people's <span style="color: seagreen;">repos</span>
-                </p>
-            </section>
-            <section>
-                <h2>Github</h2>
-                <a href="https://github.com/plethorachutney/appia/" target="_blank">My appia github repo</a>
-            </section>
         </section>
 		<section>
 			<section>
@@ -77,14 +60,23 @@
 			<section data-auto-animate>
 				<h3>Clone</h3>
 				<p>
-					When you clone a <span style="color: seagreen;">repo</span>, you download the entire history
+					When you clone a <span class="gittext repo">repo</span>, you download the entire history
 					up to that point
 				</p>
 			</section>
 			<section data-auto-animate>
 				<h3>Clone</h3>
 				<p>
-					When you clone a <span style="color: seagreen;">repo</span>, you download the entire history
+					Your repo is now the <em>exact same</em> as the <span class="gittext repo">repo</span> you cloned from!
+				</p>
+				<p>
+					The <span class="gittext repo">repo</span> you cloned from is called a remote.
+				</p>
+			</section>
+			<section data-auto-animate>
+				<h3>Clone</h3>
+				<p>
+					When you clone a <span class="gittext repo">repo</span>, you download the entire history
 					up to that point
 				</p>
 				<div id="container">
@@ -113,7 +105,8 @@
 			<section data-auto-animate>
 				<h3>Commit</h3>
 				<p>
-					Once you've hit a (small) milestone, you <span style="color: #ff7f0e;">commit</span>
+					Once you've hit a (small) milestone, you <span class="gittext committed">commit</span>
+					and include a small message saying what you've done in that commit
 				</p>
 				<div id="container">
 					<div data-id="1" class="gitnode pushed"></div>
@@ -190,7 +183,7 @@
 				<p>
 					Once you're done for the day, or have finished
 					a major milestone, you can <span class="gittext pushed">push</span>
-					to your <span class="gittext repo">repo</span>
+					to your <span class="gittext repo">remote repo</span>
 				</p>
 				<div class="repo repo_position" data-id="repo"></div>
 				<div id="container">
@@ -205,10 +198,33 @@
 			</section>
 			<section data-auto-animate>
 				<h3>Push</h3>
-				<p>
+				<p data-id="paragraph">
 					Once you're done for the day, or have finished
 					a major milestone, you can <span class="gittext pushed">push</span>
 					to your <span class="gittext repo">repo</span>
+				</p>
+				<div class="repo repo_position" data-id="repo"></div>
+				<div data-id="1" class="gitnode pushed repo_position"></div>
+				<div data-id="2" class="gitnode pushed repo_position"></div>
+				<div data-id="3" class="gitnode pushed repo_position"></div>
+				<div data-id="4" class="gitnode pushed repo_position"></div>
+				<div data-id="5" class="gitnode pushed repo_position"></div>
+				<div data-id="6" class="gitnode pushed repo_position"></div>
+				<div data-id="7" class="gitnode pushed repo_position"></div>
+				<div id="container">
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<h3>Push</h3>
+				<p data-id="paragraph">
+					Now your changes are visible and accessible to everyone else!
 				</p>
 				<div class="repo repo_position" data-id="repo"></div>
 				<div data-id="1" class="gitnode pushed repo_position"></div>
@@ -240,7 +256,7 @@
 				<h3>Fetch and merge</h3>
 				<p>
 					When you <span class='pushed gittext'>pull</span>
-					from the <span class='repo gittext'>repo</span>, 
+					from the <span class='repo gittext'>remote repo</span>, 
 					you get the most up-to-date version.
 				</p>
 			</section>
@@ -251,14 +267,14 @@
 			</section>
 			<section data-auto-animate>
 				<h3 data-id="title">Fetch</h3>
-				<p>
+				<p data-id="paragraph1">
 					Fetching downloads all <span class="gittext committed">commits</span> that have been pushed to the
-					repo to your computer, but <em>does not overwrite your local files</em>
+					repo to your computer, but <em>does not change your local files</em>
 				</p>
 			</section>
 			<section data-auto-animate>
 				<h3 data-id="title">Fetch and Merge</h3>
-				<p>
+				<p data-id="paragraph1">
 					Fetching downloads all <span class="gittext committed">commits</span> that have been pushed to the
 					repo to your computer, but <em>does not overwrite your local files</em>
 				</p>
