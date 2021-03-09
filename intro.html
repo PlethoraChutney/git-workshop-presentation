@@ -8,24 +8,65 @@
       <div class="slides">
         <section>
             <h1>Git Workshop</h1>
-            <h2>What is git?</h2>
+            <h2>What is <span style="color: plum;">git</span>?</h2>
         </section>
         <section data-auto-animate>
-            <h2>Git is a <span style="color: pink;">Version Control System</span></h2>
+            <h2><span style="color: plum;">git</span> is a <span style="color: pink;">Version Control System</span></h2>
         </section>
-        <section data-auto-animate="">
-            <h2>Git is a <span style="color: pink;">Version Control System</span></h2>
+        <section data-auto-animate>
+            <h2><span style="color: plum;">git</span> is a <span style="color: pink;">Version Control System</span></h2>
             <ul>
                 <li>Keep track of your own work</li>
                 <li class="fragment">Make collaboration easy</li>
                 <li class="fragment">Let others stay up to date</li>
             </ul>
         </section>
+        <section data-auto-animate data-auto-animate-unmatched="false">
+            <h2>What does <span style="color: plum;">git</span> do?</h2>
+            <img src="images/snapshots.png" width="600">
+            <div>
+                <span style="color: plum;">git</span> stores a 
+                set of snapshots of the entire history of your project
+            <div>
+        </section>
+        <section data-auto-animate>
+            <h2>What does <span style="color: plum;">git</span> do?</h2>
+            <img src="images/snapshots.png" width="600">
+            <p>
+                All of your changes, throughout the entire development process
+                are saved <em>locally to your machine</em>.
+            </p>
+            <p class='fragment'>You can restore them at any time, and if you break something
+                you can undo it easily
+            </p>
+        </section>
+        <section>
+            <section>
+                <p>
+                    These "snapshots" are called <span style="color: royalblue;">commits</span>
+                </p>
+                <p class='fragment'>
+                    The set of all <span style="color: royalblue;">commits</span> makes up the history of your project, and is called
+                    the <span style="color: seagreen;">repository</span>, or <span style="color: seagreen;">repo</span>
+                </p>
+                <p class='fragment'>
+                    When you go to github, you're browsing other people's <span style="color: seagreen;">repos</span>
+                </p>
+            </section>
+            <section>
+                <h2>Github</h2>
+                <a href="https://github.com/plethorachutney/appia/" target="_blank">My appia github repo</a>
+            </section>
+        </section>
       </div>
     </div>
+
+
     <script src="reveal_repo/dist/reveal.js"></script>
     <script>
-      Reveal.initialize();
+      Reveal.initialize({
+          hash: true,
+      });
     </script>
   </body>
 </html>
