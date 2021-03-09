@@ -4,13 +4,14 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - Auto Animate</title>
+		<title>What is Git? How do I use it?</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="reveal_repo/dist/reveal.css">
 		<link rel="stylesheet" href="reveal_repo/dist/theme/white.css" id="theme">
 		<link rel="stylesheet" href="css/paraiso-light.css">
+		<link rel="stylesheet" href="css/presentation.css">
 	</head>
   <body>
     <div class="reveal">
@@ -52,10 +53,10 @@
         <section>
             <section>
                 <p>
-                    These "snapshots" are called <span style="color: royalblue;">commits</span>
+                    These "snapshots" are called <span style="color: #ff7f0e;">commits</span>
                 </p>
                 <p class='fragment'>
-                    The set of all <span style="color: royalblue;">commits</span> makes up the history of your project, and is called
+                    The set of all <span style="color: #ff7f0e;">commits</span> makes up the history of your project, and is called
                     the <span style="color: seagreen;">repository</span>, or <span style="color: seagreen;">repo</span>
                 </p>
                 <p class='fragment'>
@@ -67,6 +68,237 @@
                 <a href="https://github.com/plethorachutney/appia/" target="_blank">My appia github repo</a>
             </section>
         </section>
+		<section>
+			<section>
+				<h1>So how do I actually use it?</h1>
+			</section>
+			<section data-auto-animate>
+				<h3>Clone</h3>
+				<p>
+					When you clone a <span style="color: seagreen;">repo</span>, you download the entire history
+					up to that point
+				</p>
+			</section>
+			<section data-auto-animate>
+				<h3>Clone</h3>
+				<p>
+					When you clone a <span style="color: seagreen;">repo</span>, you download the entire history
+					up to that point
+				</p>
+				<div id="container">
+					<div data-id="1" class="gitnode pushed"></div>
+					<div data-id="2" class="gitnode pushed"></div>
+					<div data-id="3" class="gitnode pushed"></div>
+					<div data-id="4" class="gitnode pushed"></div>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<h3>Write</h3>
+				<p>
+					You then write on your computer just like you would
+					any other file. Git keeps track of what files you've
+					changed, and what lines you have modified. These are
+					<span class="gittext uncommitted">uncommitted</span> changes
+				</p>
+				<div id="container">
+					<div data-id="1" class="gitnode pushed"></div>
+					<div data-id="2" class="gitnode pushed"></div>
+					<div data-id="3" class="gitnode pushed"></div>
+					<div data-id="4" class="gitnode pushed"></div>
+					<div data-id="5" class="gitnode uncommitted"></div>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<h3>Commit</h3>
+				<p>
+					Once you've hit a (small) milestone, you <span style="color: #ff7f0e;">commit</span>
+				</p>
+				<div id="container">
+					<div data-id="1" class="gitnode pushed"></div>
+					<div data-id="2" class="gitnode pushed"></div>
+					<div data-id="3" class="gitnode pushed"></div>
+					<div data-id="4" class="gitnode pushed"></div>
+					<div data-id="5" class="gitnode committed"></div>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<h3>Keep <span class="gittext committed">committing</span></h3>
+				<p>
+					Keep writing and <span class="gittext committed">committing</span> on your own computer. No need to worry
+					about what other people are doing --- everyone has their own local copy.
+				</p>
+				<div id="container">
+					<div data-id="1" class="gitnode pushed"></div>
+					<div data-id="2" class="gitnode pushed"></div>
+					<div data-id="3" class="gitnode pushed"></div>
+					<div data-id="4" class="gitnode pushed"></div>
+					<div data-id="5" class="gitnode committed"></div>
+					<div data-id="6" class="gitnode uncommitted"></div>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<h3>Keep <span class="gittext committed">committing</span></h3>
+				<p>
+					Keep writing and <span class="gittext committed">committing</span> on your own computer. No need to worry
+					about what other people are doing --- everyone has their own local copy.
+				</p>
+				<div id="container">
+					<div data-id="1" class="gitnode pushed"></div>
+					<div data-id="2" class="gitnode pushed"></div>
+					<div data-id="3" class="gitnode pushed"></div>
+					<div data-id="4" class="gitnode pushed"></div>
+					<div data-id="5" class="gitnode committed"></div>
+					<div data-id="6" class="gitnode committed"></div>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<h3>Keep <span class="gittext committed">committing</span></h3>
+				<p>
+					Keep writing and <span class="gittext committed">committing</span> on your own computer. No need to worry
+					about what other people are doing --- everyone has their own local copy.
+				</p>
+				<div id="container">
+					<div data-id="1" class="gitnode pushed"></div>
+					<div data-id="2" class="gitnode pushed"></div>
+					<div data-id="3" class="gitnode pushed"></div>
+					<div data-id="4" class="gitnode pushed"></div>
+					<div data-id="5" class="gitnode committed"></div>
+					<div data-id="6" class="gitnode committed"></div>
+					<div data-id="7" class="gitnode uncommitted"></div>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<h3>Keep <span class="gittext committed">committing</span></h3>
+				<p>
+					Keep writing and <span class="gittext committed">committing</span> on your own computer. No need to worry
+					about what other people are doing --- everyone has their own local copy.
+				</p>
+				<div id="container">
+					<div data-id="1" class="gitnode pushed"></div>
+					<div data-id="2" class="gitnode pushed"></div>
+					<div data-id="3" class="gitnode pushed"></div>
+					<div data-id="4" class="gitnode pushed"></div>
+					<div data-id="5" class="gitnode committed"></div>
+					<div data-id="6" class="gitnode committed"></div>
+					<div data-id="7" class="gitnode committed"></div>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<h3>Push</h3>
+				<p>
+					Once you're done for the day, or have finished
+					a major milestone, you can <span class="gittext pushed">push</span>
+					to your <span class="gittext repo">repo</span>
+				</p>
+				<div class="repo repo_position" data-id="repo"></div>
+				<div id="container">
+					<div data-id="1" class="gitnode pushed"></div>
+					<div data-id="2" class="gitnode pushed"></div>
+					<div data-id="3" class="gitnode pushed"></div>
+					<div data-id="4" class="gitnode pushed"></div>
+					<div data-id="5" class="gitnode committed"></div>
+					<div data-id="6" class="gitnode committed"></div>
+					<div data-id="7" class="gitnode committed"></div>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<h3>Push</h3>
+				<p>
+					Once you're done for the day, or have finished
+					a major milestone, you can <span class="gittext pushed">push</span>
+					to your <span class="gittext repo">repo</span>
+				</p>
+				<div class="repo repo_position" data-id="repo"></div>
+				<div data-id="1" class="gitnode pushed repo_position"></div>
+				<div data-id="2" class="gitnode pushed repo_position"></div>
+				<div data-id="3" class="gitnode pushed repo_position"></div>
+				<div data-id="4" class="gitnode pushed repo_position"></div>
+				<div data-id="5" class="gitnode pushed repo_position"></div>
+				<div data-id="6" class="gitnode pushed repo_position"></div>
+				<div data-id="7" class="gitnode pushed repo_position"></div>
+				<div id="container">
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+					<div class="gitnode pushed"></div>
+				</div>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h1>
+					What happens if someone else is working
+					on the same file?
+				</h1>
+			</section>
+			<section>
+				<h3>Fetch and merge</h3>
+				<p>
+					When you <span class='pushed gittext'>pull</span>
+					from the <span class='repo gittext'>repo</span>, 
+					you get the most up-to-date version.
+				</p>
+			</section>
+			<section>
+				<h3>Fetch and merge</h3>
+				<span class='pushed gittext'>Pulling</span> is a combination
+				of two steps: fetching and merging
+			</section>
+			<section data-auto-animate>
+				<h3 data-id="title">Fetch</h3>
+				<p>
+					Fetching downloads all <span class="gittext committed">commits</span> that have been pushed to the
+					repo to your computer, but <em>does not overwrite your local files</em>
+				</p>
+			</section>
+			<section data-auto-animate>
+				<h3 data-id="title">Fetch and Merge</h3>
+				<p>
+					Fetching downloads all <span class="gittext committed">commits</span> that have been pushed to the
+					repo to your computer, but <em>does not overwrite your local files</em>
+				</p>
+				<p>
+					Merging combines the changes that other people have <span class="gittext committed">committed</span>
+					and pushed to the <span class="gittext repo">repo</span> and the changes you've made locally.
+				</p>
+			</section>
+			<section>
+				<h3>Fetch and Merge</h3>
+				<p>
+					Merging does not overwrite your old files!
+				</p>
+				<p>
+					It creates a new <span class="gittext committed">commit</span> which represents the merged changes
+				</p>
+			</section>
+			<section>
+				<h1>Git is additive</h1>
+			</section>
+			<section>
+				<h3>Merging - fast forward</h3>
+				<p>
+					If none of the changes in your <span class="gittext committed">commits</span> overlap changes
+					in <span class="gittext committed">commits</span> people have pushed to the <span class="gittext repo">repo</span>, you perform
+					a "fast-forward" merge
+				</p>
+				<aside class="notes">
+					Your changes (<span class="gittext committed">commits</span>) are applied on top of the other
+					<span class="gittext committed">commits</span>, and the new state of the files is saved as 
+					a merge commit.
+				</aside>
+			</section>
+			<section>
+				<h3>Merging - conflict</h3>
+				<p>
+					If your changes overlap or conflict with changes others
+					have pushed to the <span class="gittext repo">repo</span>, you choose between your version
+					or the <span class="gittext repo">repo's</span> version.
+				</p>
+			</section>
+		</section>
         <section data-auto-animate>
 			<h3>Git Code Example</h3>
             <pre data-id="code"><code class='language-python' data-line-numbers class="hljs" data-trim>
@@ -120,6 +352,7 @@
 			Reveal.initialize({
 				center: true,
 				hash: true,
+				controls: false,
 				plugins: [ RevealHighlight ]
 			});
 		</script>

@@ -1,0 +1,51 @@
+#container {
+    width:100%;
+    text-align:center;
+   }
+#container > div { 
+    display: inline-block;
+    vertical-align: top;
+    text-align:center;
+    margin:2%;
+    padding:20px;
+}
+
+.gitnode {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.pushed {
+    background: #1f77b4;
+    color: #1f77b4;
+}
+
+.uncommitted {
+    background: #d62728;
+    color: #d62728;
+}
+
+.committed {
+    background: #ff7f0e;
+    color: #ff7f0e;
+}
+
+.repo {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background: seagreen;
+    color: seagreen;
+    z-index: 1;
+}
+
+.repo_position {
+    position: absolute;
+    right: 10px;
+    top: -30px;
+}
+
+.gittext {
+    background: white;
+}
