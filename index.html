@@ -337,11 +337,38 @@
 				<div data-id="r3" class="gitnode committed"></div>
 			</div>
 			<div id="container">
-				<div data-id="r1" class="gitnode"></div>
-				<div data-id="2" class="gitnode"></div>
-				<div data-id="3" class="gitnode"></div>
-				<div data-id="r2" class="gitnode"></div>
-				<div data-id="r3" class="gitnode"></div>
+				<div data-id="r1" class="gitnode pushed fragment fade-out" data-fragment-index="1"></div>
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+			</div>
+		</section>
+		<section data-auto-animate>
+			<h3>Merging - fast forward</h3>
+			<p>
+				If none of the changes in your <span class="gittext committed">commits</span> overlap changes
+				in <span class="gittext committed">commits</span> people have pushed to the <span class="gittext repo">repo</span>, you perform
+				a "fast-forward" merge
+			</p>
+
+			
+			<div class="repo repo_position" data-id="repo"></div>
+			<div id="container">
+				<div data-id="1" class="gitnode pushed"></div>
+				<div data-id="2" class="gitnode committed"></div>
+				<div data-id="3" class="gitnode committed"></div>
+				<div data-id="r2" class="gitnode committed"></div>
+				<div data-id="r3" class="gitnode committed"></div>
+				<div data-id="merge_commit" class="gitnode committed"></div>
+			</div>
+			<div id="container">
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
 			</div>
 		</section>
 		<section data-auto-animate data-auto-animate-unmatched="false">
@@ -359,7 +386,9 @@
 			<div data-id="3" class="gitnode pushed repo_position"></div>
 			<div data-id="r2" class="gitnode pushed repo_position"></div>
 			<div data-id="r3" class="gitnode pushed repo_position"></div>
+			<div data-id="merge_commit" class="gitnode pushed repo_position"></div>
 			<div id="container">
+				<div data-id="" class="gitnode pushed"></div>
 				<div data-id="" class="gitnode pushed"></div>
 				<div data-id="" class="gitnode pushed"></div>
 				<div data-id="" class="gitnode pushed"></div>
@@ -374,13 +403,153 @@
 				<div class="gitnode"></div>
 			</div>
 		</section>
-		<section>
+		<!-- Conflict Resolution -->
+		<section data-auto-animate>
 			<h3>Merging - conflict</h3>
 			<p>
 				If your changes overlap or conflict with changes others
 				have pushed to the <span class="gittext repo">repo</span>, you choose between your version
 				or the <span class="gittext repo">repo's</span> version.
 			</p>
+						
+			<div class="repo repo_position" data-id="repo"></div>
+			<div id="container">
+				<div data-id="1" class="gitnode pushed fragment fade-in" data-fragment-index="1"></div>
+				<div data-id="2" class="gitnode committed fragment fade-in" data-fragment-index="1"></div>
+				<div data-id="3" class="gitnode committed fragment fade-in" data-fragment-index="1"></div>
+			</div>
+			<div data-id="r1" class="gitnode pushed repo_position"></div>
+			<div data-id="r2" class="gitnode pushed repo_position"></div>
+			<div data-id="r3" class="gitnode pushed repo_position"></div>
+		</section>
+		<section data-auto-animate>
+			<h3>Merging - conflict</h3>
+			<p>
+				If your changes overlap or conflict with changes others
+				have pushed to the <span class="gittext repo">repo</span>, you choose between your version
+				or the <span class="gittext repo">repo's</span> version.
+			</p>
+						
+			<div class="repo repo_position" data-id="repo"></div>
+			<div id="container">
+				<div data-id="1" class="gitnode pushed"></div>
+				<div data-id="2" class="gitnode committed"></div>
+				<div data-id="3" class="gitnode committed"></div>
+			</div>
+			<div id="container">
+				<div data-id="r1" class="gitnode pushed"></div>
+				<div data-id="r2" class="gitnode pushed"></div>
+				<div data-id="r3" class="gitnode pushed"></div>
+			</div>
+		</section>
+		<section data-auto-animate>
+			<h3>Merging - conflict</h3>
+			<p>
+				If your changes overlap or conflict with changes others
+				have pushed to the <span class="gittext repo">repo</span>, you choose between your version
+				or the <span class="gittext repo">repo's</span> version.
+			</p>
+						
+			<div class="repo repo_position" data-id="repo"></div>
+			<div id="container">
+				<div data-id="1" class="gitnode pushed"></div>
+				<div data-id="2" class="gitnode" style="background-color: hotpink;"></div>
+				<div data-id="3" class="gitnode committed"></div>
+			</div>
+			<div id="container">
+				<div data-id="r1" class="gitnode pushed"></div>
+				<div data-id="r2" class="gitnode" style="background-color: hotpink;"></div>
+				<div data-id="r3" class="gitnode pushed"></div>
+			</div>
+		</section>
+		<section data-auto-animate>
+			<h3>Merging - conflict</h3>
+			<p>
+				If your changes overlap or conflict with changes others
+				have pushed to the <span class="gittext repo">repo</span>, you choose between your version
+				or the <span class="gittext repo">repo's</span> version.
+			</p>
+						
+			<div class="repo repo_position" data-id="repo"></div>
+			<div id="container">
+				<div data-id="1" class="gitnode pushed"></div>
+				<div data-id="2" class="gitnode" style="background-color: yellow;"></div>
+				<div data-id="3" class="gitnode committed"></div>
+			</div>
+			<div id="container">
+				<div data-id="r1" class="gitnode pushed"></div>
+				<div data-id="r2" class="gitnode" style="background-color: grey;"></div>
+				<div data-id="r3" class="gitnode pushed"></div>
+			</div>
+		</section>
+		<section data-auto-animate>
+			<h3>Merging - conflict</h3>
+			<p>
+				If your changes overlap or conflict with changes others
+				have pushed to the <span class="gittext repo">repo</span>, you choose between your version
+				or the <span class="gittext repo">repo's</span> version.
+			</p>
+						
+			<div class="repo repo_position" data-id="repo"></div>
+			<div id="container">
+				<div data-id="1" class="gitnode pushed"></div>
+				<div data-id="2" class="gitnode committed"></div>
+				<div data-id="3" class="gitnode committed"></div>
+				<div data-id="r3" class="gitnode committed"></div>
+			</div>
+			<div id="container">
+				<div data-id="r1" class="gitnode pushed fragment fade-out" data-fragment-index="1"></div>
+				<div data-id="r2" class="gitnode fragment fade-out" data-fragment-index="1" style="background-color: grey;"></div>
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+			</div>
+		</section>
+		<section data-auto-animate>
+			<h3>Merging - conflict</h3>
+			<p>
+				If your changes overlap or conflict with changes others
+				have pushed to the <span class="gittext repo">repo</span>, you choose between your version
+				or the <span class="gittext repo">repo's</span> version.
+			</p>
+						
+			<div class="repo repo_position" data-id="repo"></div>
+			<div id="container">
+				<div data-id="1" class="gitnode pushed"></div>
+				<div data-id="2" class="gitnode committed"></div>
+				<div data-id="3" class="gitnode committed"></div>
+				<div data-id="r3" class="gitnode committed"></div>
+				<div data-id="merge_commit" class="gitnode committed"></div>
+			</div>
+			<div id="container">
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+			</div>
+		</section>
+		<section data-auto-animate data-auto-animate-unmatched="false">
+			<h3>Merging - conflict</h3>
+			<p>
+				If your changes overlap or conflict with changes others
+				have pushed to the <span class="gittext repo">repo</span>, you choose between your version
+				or the <span class="gittext repo">repo's</span> version.
+			</p>
+						
+			<div class="repo repo_position" data-id="repo"></div>
+			<div data-id="1" class="gitnode pushed repo_position"></div>
+			<div data-id="2" class="gitnode pushed repo_position"></div>
+			<div data-id="3" class="gitnode pushed repo_position"></div>
+			<div data-id="r3" class="gitnode pushed repo_position"></div>
+			<div data-id="merge_commit" class="gitnode pushed repo_position"></div>
+			<div id="container">
+				<div class="gitnode pushed"></div>
+				<div class="gitnode pushed"></div>
+				<div class="gitnode pushed"></div>
+				<div class="gitnode pushed"></div>
+				<div class="gitnode pushed"></div>
+			</div>
+			<div id="container">
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+			</div>
 		</section>
         <section>
 			<h1>Let's practice!</h1>
