@@ -59,6 +59,15 @@
 		<section data-auto-animate>
 			<h3>Clone</h3>
 			<p>
+				<pre><code data-trim class="hljs shell">
+					$ git clone https://github.com/plethorachutney/appia
+				</code></pre>
+			</p>
+			<p class="fragment" data-id="history-paragraph">
+				When you clone a <span class="gittext repo">repo</span>, you download the entire history
+				up to that point
+			</p>
+			<p class="fragment">
 				Your repo is now the <em>exact same</em> as the <span class="gittext repo">repo</span> you cloned from!
 			</p>
 			<p class="fragment">
@@ -67,7 +76,7 @@
 		</section>
 		<section data-auto-animate>
 			<h3>Clone</h3>
-			<p>
+			<p data-id="history-paragraph">
 				When you clone a <span class="gittext repo">repo</span>, you download the entire history
 				up to that point
 			</p>
@@ -187,13 +196,16 @@
 				<div data-id="6" class="gitnode committed"></div>
 				<div data-id="7" class="gitnode committed"></div>
 			</div>
+			<p style="color: white;">
+				Now your changes are visible and accessible to everyone else!
+			</p>
 		</section>
-		<section data-auto-animate>
+		<section data-auto-animate data-auto-animate-unmatched="false">
 			<h3>Push</h3>
 			<p data-id="paragraph">
 				Once you're done for the day, or have finished
 				a major milestone, you can <span class="gittext pushed">push</span>
-				to your <span class="gittext repo">repo</span>
+				to your <span class="gittext repo">remote repo</span>
 			</p>
 			<div class="repo repo_position" data-id="repo"></div>
 			<div data-id="1" class="gitnode pushed repo_position"></div>
@@ -212,29 +224,9 @@
 				<div class="gitnode pushed"></div>
 				<div class="gitnode pushed"></div>
 			</div>
-		</section>
-		<section data-auto-animate>
-			<h3>Push</h3>
-			<p data-id="paragraph">
+			<p class="fragment">
 				Now your changes are visible and accessible to everyone else!
 			</p>
-			<div class="repo repo_position" data-id="repo"></div>
-			<div data-id="1" class="gitnode pushed repo_position"></div>
-			<div data-id="2" class="gitnode pushed repo_position"></div>
-			<div data-id="3" class="gitnode pushed repo_position"></div>
-			<div data-id="4" class="gitnode pushed repo_position"></div>
-			<div data-id="5" class="gitnode pushed repo_position"></div>
-			<div data-id="6" class="gitnode pushed repo_position"></div>
-			<div data-id="7" class="gitnode pushed repo_position"></div>
-			<div id="container">
-				<div class="gitnode pushed"></div>
-				<div class="gitnode pushed"></div>
-				<div class="gitnode pushed"></div>
-				<div class="gitnode pushed"></div>
-				<div class="gitnode pushed"></div>
-				<div class="gitnode pushed"></div>
-				<div class="gitnode pushed"></div>
-			</div>
 		</section>
 		<section>
 			<h1>
@@ -259,7 +251,7 @@
 			<h3 data-id="title">Fetch</h3>
 			<p data-id="paragraph1">
 				Fetching downloads all <span class="gittext committed">commits</span> that have been pushed to the
-				repo to your computer, but <em>does not change your local files</em>
+				repo to your computer, but <em>does not overwrite your local files</em>
 			</p>
 		</section>
 		<section data-auto-animate>
@@ -270,7 +262,7 @@
 			</p>
 			<p>
 				Merging combines the changes that other people have <span class="gittext committed">committed</span>
-				and pushed to the <span class="gittext repo">repo</span> and the changes you've made locally.
+				and pushed to the <span class="gittext repo">remote</span> and the changes you've made locally.
 			</p>
 		</section>
 		<section>
@@ -279,24 +271,108 @@
 				Merging does not overwrite your old files!
 			</p>
 			<p>
-				It creates a new <span class="gittext committed">commit</span> which represents the merged changes
+				It creates a new <span class="gittext committed">commit</span> which represents the changes necessary
+				to represent your work and the work you fetched from the remote
 			</p>
 		</section>
 		<section>
 			<h1>Git is additive</h1>
 		</section>
-		<section>
+		<!-- Fast forward merge -->
+		<section data-auto-animate>
 			<h3>Merging - fast forward</h3>
 			<p>
 				If none of the changes in your <span class="gittext committed">commits</span> overlap changes
 				in <span class="gittext committed">commits</span> people have pushed to the <span class="gittext repo">repo</span>, you perform
 				a "fast-forward" merge
 			</p>
-			<aside class="notes">
-				Your changes (<span class="gittext committed">commits</span>) are applied on top of the other
-				<span class="gittext committed">commits</span>, and the new state of the files is saved as 
-				a merge commit.
-			</aside>
+
+			
+			<div class="repo repo_position" data-id="repo"></div>
+			<div id="container">
+				<div data-id="1" class="gitnode pushed fragment fade-in" data-fragment-index="1"></div>
+				<div data-id="2" class="gitnode committed fragment fade-in" data-fragment-index="1"></div>
+				<div data-id="3" class="gitnode committed fragment fade-in" data-fragment-index="1"></div>
+			</div>
+			<div data-id="r1" class="gitnode pushed repo_position"></div>
+			<div data-id="r2" class="gitnode pushed repo_position"></div>
+			<div data-id="r3" class="gitnode pushed repo_position"></div>
+		</section>
+		<section data-auto-animate>
+			<h3>Merging - fast forward</h3>
+			<p>
+				If none of the changes in your <span class="gittext committed">commits</span> overlap changes
+				in <span class="gittext committed">commits</span> people have pushed to the <span class="gittext repo">repo</span>, you perform
+				a "fast-forward" merge
+			</p>
+
+			
+			<div class="repo repo_position" data-id="repo"></div>
+			<div id="container">
+				<div data-id="1" class="gitnode pushed"></div>
+				<div data-id="2" class="gitnode committed"></div>
+				<div data-id="3" class="gitnode committed"></div>
+			</div>
+			<div id="container">
+				<div data-id="r1" class="gitnode pushed"></div>
+				<div data-id="r2" class="gitnode pushed"></div>
+				<div data-id="r3" class="gitnode pushed"></div>
+			</div>
+		</section>
+		<section data-auto-animate>
+			<h3>Merging - fast forward</h3>
+			<p>
+				If none of the changes in your <span class="gittext committed">commits</span> overlap changes
+				in <span class="gittext committed">commits</span> people have pushed to the <span class="gittext repo">repo</span>, you perform
+				a "fast-forward" merge
+			</p>
+
+			
+			<div class="repo repo_position" data-id="repo"></div>
+			<div id="container">
+				<div data-id="1" class="gitnode pushed"></div>
+				<div data-id="2" class="gitnode committed"></div>
+				<div data-id="3" class="gitnode committed"></div>
+				<div data-id="r2" class="gitnode committed"></div>
+				<div data-id="r3" class="gitnode committed"></div>
+			</div>
+			<div id="container">
+				<div data-id="r1" class="gitnode"></div>
+				<div data-id="2" class="gitnode"></div>
+				<div data-id="3" class="gitnode"></div>
+				<div data-id="r2" class="gitnode"></div>
+				<div data-id="r3" class="gitnode"></div>
+			</div>
+		</section>
+		<section data-auto-animate data-auto-animate-unmatched="false">
+			<h3>Merging - fast forward</h3>
+			<p>
+				If none of the changes in your <span class="gittext committed">commits</span> overlap changes
+				in <span class="gittext committed">commits</span> people have pushed to the <span class="gittext repo">repo</span>, you perform
+				a "fast-forward" merge
+			</p>
+
+			
+			<div class="repo repo_position" data-id="repo"></div>
+			<div data-id="1" class="gitnode pushed repo_position"></div>
+			<div data-id="2" class="gitnode pushed repo_position"></div>
+			<div data-id="3" class="gitnode pushed repo_position"></div>
+			<div data-id="r2" class="gitnode pushed repo_position"></div>
+			<div data-id="r3" class="gitnode pushed repo_position"></div>
+			<div id="container">
+				<div data-id="" class="gitnode pushed"></div>
+				<div data-id="" class="gitnode pushed"></div>
+				<div data-id="" class="gitnode pushed"></div>
+				<div data-id="" class="gitnode pushed"></div>
+				<div data-id="" class="gitnode pushed"></div>
+			</div>
+			<div id="container">
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+				<div class="gitnode"></div>
+			</div>
 		</section>
 		<section>
 			<h3>Merging - conflict</h3>
